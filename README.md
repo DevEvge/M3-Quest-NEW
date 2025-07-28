@@ -1,37 +1,48 @@
 # QuestGame
 
-## Overview
-
-QuestGame is an interactive web-based quiz game implemented as a Java web application.  
-Players answer a series of questions, branching the story depending on their choices.
+**QuestGame** is an interactive, web‑based quiz adventure written in Java. Players navigate a branching storyline by answering a series of questions.
 
 ---
 
-## Technologies Used
+## 🔧 Technologies
 
-- **Java 17** — main programming language
-- **Servlet API 4.0** — to handle HTTP requests and sessions
-- **JSP** — for server-side page rendering
-- **JUnit 5** — unit testing framework
-- **Mockito** — for mocking in tests
-- **Maven** — build and dependency management
-- **Apache Tomcat 9** — servlet container to deploy the web application
-
----
-
-## Project Structure
-
-- `src/main/java` — Java servlet controllers and business logic
-- `src/main/webapp` — JSP pages, static resources (CSS)
-- `src/test/java` — unit tests
-- `pom.xml` — Maven configuration
+- **Java 17** — core language  
+- **Servlet API 4.0** — HTTP request handling & session management  
+- **JSP** — server‑side page rendering  
+- **JUnit 5** & **Mockito** — unit tests and mocks  
+- **Maven** — build, dependency management  
+- **Apache Tomcat 9** — servlet container (deployment)
 
 ---
 
-## How to Build and Run
+## 📂 Project Structure
+src/
+├── main/
+│ ├── java/ # Servlets & business logic
+│ └── webapp/ # JSP pages & static assets (CSS, images)
+└── test/java/ # JUnit tests
+pom.xml # Maven configuration
 
-### Prerequisites
+---
 
-- Java 17 installed
-- Maven installed
-- Docker installed (optional, for containerized run)  
+## 🚀 Build & Run
+
+1. **Prerequisites**:  
+   - Java 17  
+   - Maven  
+   - (Optional) Docker  
+
+2. **Build**:
+   ```bash
+   mvn clean package
+
+   Deploy:
+
+Copy target/QuestGame.war into Tomcat’s webapps/ folder
+
+Or run via Maven Tomcat plugin:
+mvn tomcat7:run
+Play:
+Open your browser at http://localhost:8080/QuestGame
+
+Enjoy the adventure—your choices shape the story!
